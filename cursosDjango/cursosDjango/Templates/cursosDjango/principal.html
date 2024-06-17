@@ -1,9 +1,36 @@
-
-{% extends "cursosDjango/encabezado.html" %}
+{% extends "cursosDjango/layout.html" %}
 {% block titulo %} PRINCIPAL {%endblock%}
+
+{% block imagen%}
+  {%load static %}
+  {%static 'cursosDjango/imagenes/casita.png'%}
+{%endblock%}
+
+{% block texto%}
+  {%load static %}
+  
+  <div class="user-info">
+    PAGINA PRINCIPAL <span>DJANGO</span>
+  </div>
+{%endblock%}
 
 
 {% block contenido%}
-<h1>Bienvenido al portal de cursos de nuestra institución TIC</h1>
+
+    <!--Encabezdo -->
+    <div class="page-header">
+            <div class="titulo">
+              <h1>BIENVENIDO AL PORTAL DE CURSOS DJANGO</h1>
+          </div>
+        </div>
+    </div>
+  
+{%endblock%}
+
+{% block ubicacion%}
 
 {%endblock%}
+
+
+
+
