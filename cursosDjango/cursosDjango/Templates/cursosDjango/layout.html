@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <title>{% block titulo %} {% endblock %}</title>
+
+    {% load static %}
+    <link href="{% static 'cursosDjango/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'cursosDjango/css/londinium-theme.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'cursosDjango/css/styles.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'cursosDjango/css/icons.css' %}" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="{% static 'js/plugins/charts/sparkline.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/forms/uniform.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/forms/select2.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/forms/inputmask.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/forms/autosize.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/forms/inputlimit.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/forms/listbox.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/forms/multiselect.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/forms/validate.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/forms/tags.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/forms/switch.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/forms/uploader/plupload.full.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/forms/uploader/plupload.queue.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/forms/wysihtml5/wysihtml5.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/forms/wysihtml5/toolbar.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/interface/daterangepicker.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/interface/fancybox.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/interface/moment.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/interface/jgrowl.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/interface/datatables.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/interface/colorpicker.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/interface/fullcalendar.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins/interface/timepicker.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/application.js' %}"></script>
+</head>
+<body class="layout" >
+    <div class="page-container subcuerpo">
+        <div class="headerPrincipal">
+            <img src="{% static 'cursosDjango/imagenes/SII.png' %}" style="width: 150px; height: 103px; position: relative; right: 240px; " alt="Descripción">
+¡            <img src="{% static 'cursosDjango/imagenes/PY.png' %}" style="width: 180px; height: 100px; position: relative; left: 480px;" alt="Descripción">
+        </div>        
+        <!-- Barra de menú -->
+        <div class="sidebar sidd" style="border: 2px solid #000000;">
+            <div class="user-menu " style="background-color: #1F4590;" >
+                <a href="#">
+                    <img src="{% block imagen %}{% endblock %}" alt="">
+                    <div>{% block texto %}{% endblock %}</div>
+                </a>
+            </div>
+            
+            <div class="navegadorrr">
+                <p>Estas ubicado en:<p/>
+                <ul class="navegador">
+                    <li>
+                        <a href="{% url 'PaginaPrincipal' %}" class="breadcrumb-link">
+                            {% if request.path == '/' %}
+                                Principal
+                            {% else %}
+                                Principal {{ request.path }}
+                            {% endif %}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-content">
+                <!-- Menú de navegación -->
+                <ul class="navigation">
+                    <li><a href="{% url 'PaginaPrincipal' %}">INICIO</a></li>
+                    <li><a href="{% url 'Cursos' %}">CURSOS</a></li>
+                    <li><a href="{% url 'Contacto' %}">REGITRO CONTACTO</a></li>
+                </ul>
+            </div>
+
+            
+        </div>
+
+        
+        <div class="page-content">
+            {% block contenido %}
+            {% endblock %}
+
+            {% block ubicacion %}
+            {% endblock %}
+
+            {% block formulario %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

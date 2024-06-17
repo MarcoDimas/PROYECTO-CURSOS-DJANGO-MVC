@@ -1,14 +1,63 @@
-{% extends "cursosDjango/encabezado.html" %}
-{% block titulo %} CURSOS {%endblock%}
+{% extends "cursosDjango/layout.html" %}
+{% block titulo%} CONTACTO {%endblock%}
+
+
+
+{% block imagen%}
+  {%load static %}
+  {%static 'cursosDjango/imagenes/DJANG.png'%}
+  
+{%endblock%}
+
+
+
+{% block texto%}
+  {%load static %}
+  
+  <div class="user-info">
+    CURSOS DJANGO <span>DJANGO</span>
+  </div>
+{%endblock%}
 
 
 {% block contenido%}
-  <h2>Cursos Disponibles</h2>
-    <ul>
-   <li> <p>Base de datos</p> </li>
-    <li> <p>Multiplataforma</p> </li>
-    <li> <p>Ciencias de la investigación</p> </li>
-    <li> <p>Metodologia de la programacion</p> </li>
-    </ul>
+
+    <div class="page-header">
+        <div class="page-title">
+            <h3  style="position: relative; left: 238px;">CURSOS EN LINEA  
+            <small>Cursos disponibles</small></h3>
+        </div>
+    </div>
     
 {%endblock%}
+
+{% block ubicacion%}
+
+{%endblock%}
+
+{% block formulario%}
+<div class="cursos-tabla">
+  <h2>CURSOS</h2>
+  <table>
+      <tr>
+          <td>Base de datos</td>
+      </tr>
+      <tr>
+          <td>Multiplataforma</td>
+      </tr>
+      <tr>
+          <td>Ciencias de la investigación</td>
+      </tr>
+      <tr>
+          <td>Metodologia de la programacion</td>
+      </tr>
+  </table>
+</div>
+
+<br><br>
+{%endblock%}
+
+
+
+
+
