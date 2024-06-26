@@ -3,44 +3,21 @@
 
 
 
-{% block imagen%}
-  {%load static %}
-  {%static 'cursosDjango/imagenes/formulario.png'%}
-  
-{%endblock%}
-
-
-
-{% block texto%}
-  {%load static %}
-  
-  <div class="user-info">
-    CONTACTO <span>DJANGO</span>
-  </div>
-{%endblock%}
-
-
-
 {% block contenido%}
-
-    <!--Encabezdo -->
     <div class="page-header">
         <div class="page-title">
             <h3 style="position: relative; left: 220px;">CONTACTO 
             <small>Ingresa tu información</small></h3>
         </div>
 
-    
     </div>
 {%endblock%}
 
-{% block ubicacion%}
 
-{%endblock%}
 
 {% block formulario%}
      
-    <form class="form-horizontal" role="form" >
+    <form class="form-horizontal ajutarFormulario" role="form" >
       <div class="panel panel-default" style="background-color: #E6FEE6;">
           <div class="panel-body">
   
@@ -61,12 +38,12 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label text-right" style="position: relative; right: 35px;">Cursos Disponibles:</label>
                 <div class="col-sm-10">
-                  <select data-placeholder="Elige un curso..." class="select" tabindex="2" style="position: relative; right: 325px;">
-                              <option value=""></option> 
-                              <option value="win7">Base de datos</option> 
-                              <option value="win8">Multiplataforma</option> 
-                              <option value="macos">Ciencias de la investigación</option> 
-                              <option value="macos">Metodologia de la programacion</option> 
+                  <select  style="position: relative; right: 325px;">
+                              <option></option> 
+                              <option>Base de datos</option> 
+                              <option>Multiplataforma</option> 
+                              <option>Ciencias de la investigación</option> 
+                              <option>Metodologia de la programacion</option> 
                       </select>
                 </div>
             </div>
@@ -89,7 +66,7 @@
   </form>
   
 
-  <br><br><br
+  <br><br><br>
 {%endblock%}
 
 
@@ -102,6 +79,42 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} 
+{% block imagen%}
+  {%load static %}
+  {%static 'cursosDjango/imagenes/formulario.png'%}
+  
+{%endblock%}
+
+
+
+{% block texto%}
+  {%load static %}
+  
+  <div class="user-info">
+    CONTACTO <span>DJANGO</span>
+  </div>
+{%endblock%} {% endcomment %}
 
 
 

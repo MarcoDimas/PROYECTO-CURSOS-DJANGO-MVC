@@ -1,23 +1,5 @@
 {% extends "cursosDjango/layout.html" %}
-{% block titulo%} CONTACTO {%endblock%}
-
-
-
-{% block imagen%}
-  {%load static %}
-  {%static 'cursosDjango/imagenes/DJANG.png'%}
-  
-{%endblock%}
-
-
-
-{% block texto%}
-  {%load static %}
-  
-  <div class="user-info">
-    CURSOS DJANGO <span>DJANGO</span>
-  </div>
-{%endblock%}
+{% block titulo%} CURSOS {%endblock%}
 
 
 {% block contenido%}
@@ -54,10 +36,44 @@
   </table>
 </div>
 
-<br><br>
+<br><br><br><br>
 {%endblock%}
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} {% block imagen%}
+  {%load static %}
+  {%static 'cursosDjango/imagenes/DJANG.png'%}
+  
+{%endblock%}
+
+{% block texto%}
+  {%load static %}
+  
+  <div class="user-info">
+    CURSOS DJANGO <span>DJANGO</span>
+  </div>
+{%endblock%} {% endcomment %}

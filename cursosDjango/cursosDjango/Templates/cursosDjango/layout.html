@@ -12,79 +12,32 @@
     <link href="{% static 'cursosDjango/css/styles.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'cursosDjango/css/icons.css' %}" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-pzjw8f+ua7Kw1TIqj3czORAZ5LGb8o2eNV6pH9I3s5DImf43nMfw5mD9C8u2vFjh" crossorigin="anonymous">
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
-
-    <script type="text/javascript" src="{% static 'js/plugins/charts/sparkline.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/forms/uniform.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/forms/select2.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/forms/inputmask.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/forms/autosize.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/forms/inputlimit.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/forms/listbox.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/forms/multiselect.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/forms/validate.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/forms/tags.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/forms/switch.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/forms/uploader/plupload.full.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/forms/uploader/plupload.queue.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/forms/wysihtml5/wysihtml5.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/forms/wysihtml5/toolbar.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/interface/daterangepicker.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/interface/fancybox.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/interface/moment.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/interface/jgrowl.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/interface/datatables.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/interface/colorpicker.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/interface/fullcalendar.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/plugins/interface/timepicker.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/application.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js" integrity="sha384-pzjw8f+ua7Kw1TIqj3czORAZ5LGb8o2eNV6pH9I3s5DImf43nMfw5mD9C8u2vFjh" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIqj3czORAZ5LGb8o2eNV6pH9I3s5DImf43nMfw5mD9C8u2vFjh" crossorigin="anonymous"></script>
 </head>
-<body class="layout" >
+
+
+<body class="layout">
     <div class="page-container subcuerpo">
         <div class="headerPrincipal">
-            <img src="{% static 'cursosDjango/imagenes/SII.png' %}" style="width: 150px; height: 103px; position: relative; right: 240px; " alt="Descripción">
-¡            <img src="{% static 'cursosDjango/imagenes/PY.png' %}" style="width: 180px; height: 100px; position: relative; left: 480px;" alt="Descripción">
-        </div>        
-        <!-- Barra de menú -->
-        <div class="sidebar sidd" style="border: 2px solid #000000;">
-            <div class="user-menu " style="background-color: #1F4590;" >
-                <a href="#">
-                    <img src="{% block imagen %}{% endblock %}" alt="">
-                    <div>{% block texto %}{% endblock %}</div>
-                </a>
-            </div>
-            
-            <div class="navegadorrr">
-                <p>Estas ubicado en:<p/>
-                <ul class="navegador">
-                    <li>
-                        <a href="{% url 'PaginaPrincipal' %}" class="breadcrumb-link">
-                            {% if request.path == '/' %}
-                                Principal
-                            {% else %}
-                                Principal {{ request.path }}
-                            {% endif %}
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="sidebar-content">
-                <!-- Menú de navegación -->
-                <ul class="navigation">
-                    <li><a href="{% url 'PaginaPrincipal' %}">INICIO</a></li>
-                    <li><a href="{% url 'Cursos' %}">CURSOS</a></li>
-                    <li><a href="{% url 'Contacto' %}">REGITRO CONTACTO</a></li>
-                </ul>
-            </div>
-
-            
+            <br>
+            <img src="{% static 'cursosDjango/imagenes/SII.png' %}" style="width: 150px; height: 103px; position: absolute; right: 0;" alt="Descripción">
+            <img src="{% static 'cursosDjango/imagenes/PY.png' %}" style="width: 180px; height: 100px; position: absolute; left: 0;" alt="Descripción">
+            <img src="{% static 'cursosDjango/imagenes/logoDj.png' %}" style="width: 275px; height: 100px; text-align: center;" alt="Descripción">
+            <br>   <br>
         </div>
 
-        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #AFC6F5;">
+        <br>
+                        <a class="nav-link1" href="{% url 'PaginaPrincipal' %}"><i class="fas fa-home"></i> INICIO</a>    
+                        <a class="nav-link2" href="{% url 'Cursos' %}"><i class="fas fa-book"></i> CURSOS</a>            
+                        <a class="nav-link3" href="{% url 'Contacto' %}"><i class="fas fa-address-book"></i> CONTACTO</a>
+        </nav>
+
         <div class="page-content">
             {% block contenido %}
             {% endblock %}
@@ -95,6 +48,12 @@
             {% block formulario %}
             {% endblock %}
         </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="text-muted">© 2024 Portal de Cursos Django. Todos los derechos reservados.</p>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
