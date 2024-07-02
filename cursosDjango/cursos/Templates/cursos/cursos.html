@@ -18,16 +18,20 @@
 {%endblock%}
 
 {% block formulario%}
-<div class="cursos-tabla">
 
+    {% for curso in 9B %}
+    <div>
+        <p><strong>Nombre:</strong> {{ curso.nombre }}</p>
+        <p><strong>Email:</strong> {{ curso.email }}</p>
+        <p><strong>Curso:</strong> {{ curso.curso }}</p>
+        <p><strong>Módulos:</strong> {{ curso.modulos }}</p>
+        <p><strong>Precio:</strong> {{ curso.precio }}</p>
+        <p><strong>Comentario:</strong> {{ curso.comentario }}</p>
+        <hr>
+        
+    </div>
 
-  <ul>
-    <li> <p>Base de datos</p> </li>
-     <li> <p>Multiplataforma</p> </li>
-     <li> <p>Ciencias de la investigación</p> </li>
-     <li> <p>Metodologia de la programacion</p> </li>
-     </ul>
-
+     {% endfor %}
 {% comment %}      
   <h2>CURSOS</h2>
   <table>
